@@ -1,0 +1,54 @@
+<h2>Cadastro</h2><br>
+
+<form id="Cadastro" name="Cadastro" method="post">
+  <table class="tableFormulario">
+    <tr>
+      <td><label class="formulario" for="email">Email:</label class="formulario"></td>
+      <td><input type="email" required name="email" id="email"></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td><label class="formulario" for="user">Usuário:</label class="formulario"></td>
+      <td><input required type="text" name="user" id="user" value=""></td>
+    </tr>
+    <tr>
+      <td><label class="formulario" for="password">Senha:</label class="formulario"></td>
+      <td><input type="password" name="password" id="password"></td>
+    </tr>
+    <tr>
+      <td><label class="formulario" for="repassword">Confirmar Senha:</label class="formulario"></td>
+      <td><input onkeyup="passCheckJs()" type="password" name="repassword" id="repassword">
+      </td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>
+      		<div id="passCheck"></div>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+      	<input type="submit" name="submit" id="submit" value="Enviar">
+        <input onClick="document.getElementById('submit').disabled = true; document.querySelector("#passCheck").innerHTML='';" type="reset" name="reset" id="reset" value="Redefinir"></td>
+    </tr>
+  </table>
+</form>
+
+<script type="text/javascript">
+	//ATIVAR OU NÃO O BOTÃO DE ENVIAR
+	document.getElementById("submit").disabled = true;
+	function passCheckJs(){
+		var pass = document.querySelector("#password").value;
+		var repass = document.querySelector("#repassword").value;
+		if (pass == repass) {
+			document.querySelector("#passCheck").innerHTML = "As senhas correspondem";
+			document.getElementById("submit").disabled = false;
+		}else{
+			document.querySelector("#passCheck").innerHTML = "As senhas não correspondem";
+			document.getElementById("submit").disabled = true;
+		};
+	}
+</script>

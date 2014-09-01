@@ -1,0 +1,51 @@
+<html>
+<head>
+	<title>League of Legends</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<meta charset="utf-8">
+</head>
+<body>
+		<div id="topo">
+			<div id="menu">
+				<label for="link-1">In&iacute;cio</label>
+		        <input type="radio" id="link-1" name="links">
+		        <label for="link-2">Cadastre-se</label>
+		        <input type="radio" id="link-2" name="links">
+		        <label for="link-3">Lan&ccedil;amento</label>
+		        <input type="radio" id="link-3" name="links">
+		        <label for="link-4">Contato</label>
+		        <input type="radio" id="link-4" name="links">
+	        </div>
+		</div>
+		<div id="SlideALL">
+			<div id="SlideText"></div>
+		</div>
+		<div id="main">
+			<div id="conteudo-1">
+				<div id="incl-1"></div>
+	        </div>
+	        <div id="conteudo-2">
+				<div id="incl-2"></div>
+	        </div>
+	        <div id="conteudo-3">
+				<div id="incl-3"></div>
+	        </div>
+	        <div id="conteudo-4">
+				<div id="incl-4"></div>
+	        </div>
+		</div>
+</body>
+</html>
+
+<script src="_js/Slide-BG.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.js"></script>
+<script src="_js/Abas-jquery.js"></script>
+<script>
+	//INCLUINDO PÁGINAS
+    $(function(){
+      $("#incl-1").load("_pg/noticias.html"); 
+      $("#incl-2").load("_pg/cadastro.html"); 
+      $("#incl-3").load("_pg/lancamento.html"); 
+      $("#incl-4").load("_pg/contato.html"); 
+    });
+</script> 

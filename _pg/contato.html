@@ -1,0 +1,77 @@
+<h2>Contato</h2><br>
+
+
+<form onsubmit="return valida(this);">
+
+  <table class="tableFormulario">
+    <tr>
+      <td><label class="formulario" for="nome">Nome:</label></td>
+      <td><input type="text" name="nome"></td>
+    </tr>
+    <tr>
+      <td><label class="formulario" for="email">Email:</label></td>
+      <td><input type="text" name="email"></td>
+    </tr>
+    <tr>
+     	<td colspan="2" class="formulario">
+     		Sexo: <input type="radio" name="sexo" value="masc"> Masculino  <input type="radio" name="sexo" value="fem"> Feminino
+    	</td>
+    </tr>
+    <tr>
+     	<td colspan="2"><textarea placeholder="Sua mensagem..."></textarea>
+    	</td>
+    </tr>
+    <tr>
+     	<td colspan="2">
+			<input type="submit" value="Enviar">
+    	</td>
+    </tr>
+  </table>
+
+</form>
+
+<script type="text/javascript">
+	//----------------------------------------------------VALIDAÇÃO DO FORMULARIO----------------------------------------------------//
+	//FUNÇÃO AUXILIAR PARA A VALIDAÇÃO
+	function IsNum(v)
+
+	{
+	   var ValidChars = "0123456789";
+	   var IsNumber=true;
+	   var Char;
+
+	 
+	   for (i = 0; i < v.length && IsNumber == true; i++) 
+	      { 
+	      Char = v.charAt(i); 
+	      if (ValidChars.indexOf(Char) == -1) 
+	         {
+	         IsNumber = false;
+	         }
+	      }
+	   return IsNumber;
+	   
+	}
+	//COMEÇO DA VALIDAÇÃO DO FORMULARIO
+	function valida(form){
+		//VALIDAR O NOME = NAO PODE SER EM BRANCO
+		if (form.nome.value=="") {
+	alert("Preencha o nome corretamente.");
+	form.nome.focus();
+	return false;
+		}
+		//VALIDAR EMAIL
+		var filtro_mail = /^.+@.+\..{2,3}$/ //DEFINE O FORMATO DO EMAIL
+	if (!filtro_mail.test(form.email.value) || form.email.value=="") { //CHECA SE O EMAIL ESTÁ NO FORMATO DEFINIDO
+	alert("Preencha o e-mail corretamente.");
+	form.email.focus();
+	return false;
+		}
+		//VALIDAR O SEXO = TEM QUE TER PELO MENOS UM SELECIONADO
+		if (form.sexo[0].checked==false && form.sexo[1].checked==false) {
+	alert("Selecione o sexo.");
+	return false;
+		}
+		
+	}
+</script>

@@ -1,0 +1,118 @@
+body{
+	font-family: "Segoe UI", Tahoma, Arial;
+	font-size: 12px;
+	color: #000;
+	background-color: #000;
+	background-attachment:fixed;
+	background-repeat: no-repeat;
+	background-position: top center;
+	background-size: 100% auto;
+}
+input[type=text],input[type=password],input[type=email], textarea{
+	padding: 5px;
+	font-family: "Segoe UI", Tahoma, Arial;
+	font-size: 12px;
+}
+#menu input[type=radio]{
+	display: none;
+}
+#menu>label{
+	color: #FFF;
+	padding-right: 15px;
+	font-size: 15px;
+	transition: all .7s;
+}
+#menu>label:hover{
+	text-shadow: 0 0 7px #DDF;
+	transition: all .7s;
+}
+h2{
+	margin: 0;
+	font-family: Georgia,"Times New Roman",Times,serif;
+	font-weight: normal;
+    font-size: 30px;
+    color: #DFE1E1;
+	background: url("_img/h2-bg.jpg");
+	background-size: 100% 100%;
+	padding: 10px;
+}
+#SlideALL{
+	width: 1000px;
+	margin: auto;
+	min-height: 300px;
+	font-size: 30px;
+	color: #DD0;
+}#SlideText{
+	width: 500px;
+	float: left;
+	min-height: 300px;
+	font-size: 18px;
+	color: #DDD;
+	font-style: italic;
+	font-family: Georgia,"Times New Roman",Times,serif;
+	text-shadow: 2px 2px 2px #000;
+}#SlideText span{
+	font-size: 40px;
+	color: #FF9C00;
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+#topo{
+	height: 190px;
+	width: 100%;
+	background-image: url('_img/header-bg.png');
+	background-repeat: no-repeat;
+	background-position: center;
+}
+#menu{
+	position: static;
+	margin: auto;
+	padding-top: 115px;
+	text-align: center;
+	text-transform: uppercase;
+}
+#main{
+	width: 1000px;
+	min-height: 300px;
+	margin: auto;
+	background-color: #dedede;
+	box-shadow: 0 0 10px #5cd5db;
+	border: 1px solid #232322;
+	padding: 20px;
+}
+
+.formulario{
+	font-size: 13px;
+	color: #000;
+}
+.tableFormulario{
+	margin: auto;
+	text-align: right;
+}
+#passCheck{
+	font-size: 11px;
+	color: #666;
+}
+.tableNoticia{
+	font-size: 12px;
+	width: 80%;
+	margin: auto;
+	color: #000;
+	border-bottom: 1px solid #d1d3d4;
+	vertical-align: top;
+	box-shadow: 0 1px 0 #FFF;
+	transition: all .5s;
+}
+.tableNoticia:hover{
+	background-color: #CCC;
+	transition: all .5s;
+}
+.tableNoticia img{
+	width: 220px;
+	height: auto;
+}
+.tableNoticia h5{
+	font-weight: bold;
+}
